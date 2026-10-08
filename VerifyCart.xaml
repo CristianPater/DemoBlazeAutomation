@@ -115,8 +115,8 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[String.Format(&quot;Checking if the cart has items&quot;)]" />
-      <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click &quot;Cart&quot; Button" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+      <ui:LogMessage DisplayName="Log Check if Cart is Empty" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[String.Format(&quot;Checking if the cart has items&quot;)]" />
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Cart&quot; Button" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -137,14 +137,10 @@
       </ui:Click>
       <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'Delete' Button" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a694bc1-34a0-49a9-95c0-be90ef5d1b16" InformativeScreenshot="cb7490d2208dabc5633cdc4c3253c940" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" WaitForReady="COMPLETE">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
-          </ui:Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a694bc1-34a0-49a9-95c0-be90ef5d1b16" InformativeScreenshot="cb7490d2208dabc5633cdc4c3253c940" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
-      <ui:ExtractData ContinueOnError="{x:Null}" DataTable="[dtCart]" DelayBetweenPagesMS="{x:Null}" DisplayName="Extract Structured Data from Cart" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Pic' attr='fulltext' name2='Pic Src' attr2='src' /&gt;&lt;column name='Title' attr='fulltext' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='x' attr='fulltext' name2='x Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" NextLinkSelector="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}">
+      <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dtCart]" DisplayName="Extract Structured Data from Cart" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Pic' attr='fulltext' name2='Pic Src' attr2='src' /&gt;&lt;column name='Title' attr='fulltext' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='x' attr='fulltext' name2='x Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
         <ui:ExtractData.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="103ddd5c-5150-429b-8573-3dcd9a687ebc" InformativeScreenshot="8dbbf273fa8644abe3f52326a7c3ac7b" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
             <ui:Target.TimeoutMS>
@@ -153,7 +149,7 @@
           </ui:Target>
         </ui:ExtractData.Target>
       </ui:ExtractData>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtCart]" DisplayName="For Each Item in Cart" sap:VirtualizedContainerService.HintSize="450,508" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtCart]" DisplayName="For Each Item in Cart" sap:VirtualizedContainerService.HintSize="450,508" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -166,7 +162,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Delay Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-              <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click &quot;Delete&quot; button" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Delete&quot; button" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -189,7 +185,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[String.Format(&quot;Cart is clear of items&quot;)]" />
+      <ui:LogMessage DisplayName="Log Clear Cart" sap:VirtualizedContainerService.HintSize="450,164" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[String.Format(&quot;Cart is clear of items&quot;)]" />
     </Sequence>
   </Sequence>
 </Activity>

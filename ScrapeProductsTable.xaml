@@ -169,7 +169,7 @@
           <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(inputPriceString)]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign DisplayName="Initialise dt_Products" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_6">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_Products]</OutArgument>
         </Assign.To>
@@ -177,7 +177,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="the maximum amount of products per a page are 9 products, if we extract a lower amount we know that we reached the end of the pages" Condition="[dt_ScrapedProducts.Rows.Count = 9]" CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="518,543" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="{x:Null}">
+      <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="the maximum amount of products per a page are 9 products, if we extract a lower amount we know that we reached the end of the pages" Condition="[dt_ScrapedProducts.Rows.Count = 9]" CurrentIndex="{x:Null}" DisplayName="Do Extract Products While There are Pages" sap:VirtualizedContainerService.HintSize="518,543" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="{x:Null}">
         <ui:InterruptibleDoWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,355" sap2010:WorkflowViewState.IdRef="Sequence_30">
             <sap:WorkflowViewStateService.ViewState>
@@ -227,7 +227,7 @@
           </scg:List>
         </ui:FilterDataTable.SelectColumns>
       </ui:FilterDataTable>
-      <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign DisplayName="Assign Columns to dt_FilteredProducts" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_7">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dt_FilteredProducts]</OutArgument>
         </Assign.To>
@@ -235,7 +235,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[dt_BrandFiltered.Clone()]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BrandFiltered]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,775" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BrandFiltered]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,775" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -247,7 +247,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[CInt(row(&quot;Price&quot;).ToString().Replace(&quot;$&quot;, &quot;&quot;).Trim()) &gt;= minPrice AndAlso CInt(row(&quot;Price&quot;).ToString().Replace(&quot;$&quot;, &quot;&quot;).Trim()) &lt;= maxPrice]" sap:VirtualizedContainerService.HintSize="450,519" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[CInt(row(&quot;Price&quot;).ToString().Replace(&quot;$&quot;, &quot;&quot;).Trim()) &gt;= minPrice AndAlso CInt(row(&quot;Price&quot;).ToString().Replace(&quot;$&quot;, &quot;&quot;).Trim()) &lt;= maxPrice]" DisplayName="If Price is in Range" sap:VirtualizedContainerService.HintSize="450,519" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
@@ -255,7 +255,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[row.ItemArray]" DataTable="[dt_FilteredProducts]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:AddDataRow ArrayRow="[row.ItemArray]" DataRow="{x:Null}" DataTable="[dt_FilteredProducts]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
@@ -272,7 +272,7 @@
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
-      <If Condition="[dt_FilteredProducts.Rows.Count = 0]" sap:VirtualizedContainerService.HintSize="518,432" sap2010:WorkflowViewState.IdRef="If_2">
+      <If Condition="[dt_FilteredProducts.Rows.Count = 0]" DisplayName="If dt_FilteredProducts is Empty" sap:VirtualizedContainerService.HintSize="518,432" sap2010:WorkflowViewState.IdRef="If_2">
         <If.Then>
           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
@@ -301,7 +301,7 @@
           <InArgument x:TypeArguments="sd:DataRow">[dt_FilteredProducts.AsEnumerable().OrderByDescending(Function(r) CInt(r("Price").ToString().Replace("$", "").Trim())).First()]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="518,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Join(&quot;, &quot;, out_mostExpensiveProduct.ItemArray)]" />
+      <ui:LogMessage DisplayName="Log Extracted Product" sap:VirtualizedContainerService.HintSize="518,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Join(&quot;, &quot;, out_mostExpensiveProduct.ItemArray)]" />
     </Sequence>
   </Sequence>
 </Activity>

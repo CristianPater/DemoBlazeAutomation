@@ -102,13 +102,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1434,1316" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence sap:VirtualizedContainerService.HintSize="1485,694.04" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="It performs the login to the correct user, if it already logged in but with the wrong acount then it logs out and makes sure the login is for the corect user" DisplayName="Login Sequence" sap:VirtualizedContainerService.HintSize="1434,1293" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="It performs the login to the correct user, if it already logged in but with the wrong acount then it logs out and makes sure the login is for the corect user" DisplayName="Login Sequence" sap:VirtualizedContainerService.HintSize="1485,666" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -116,14 +116,14 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Pick sap:VirtualizedContainerService.HintSize="1400,1179" sap2010:WorkflowViewState.IdRef="Pick_2">
+      <Pick sap:VirtualizedContainerService.HintSize="1451,552" sap2010:WorkflowViewState.IdRef="Pick_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <PickBranch sap2010:Annotation.AnnotationText="Enters the username and password and aptempts a log in" DisplayName="PickBranch User is not Logged in" sap:VirtualizedContainerService.HintSize="424,1109" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+        <PickBranch sap2010:Annotation.AnnotationText="Enters the username and password and aptempts a log in" DisplayName="PickBranch User is not Logged in" sap:VirtualizedContainerService.HintSize="427,482" sap2010:WorkflowViewState.IdRef="PickBranch_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -132,7 +132,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <PickBranch.Trigger>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log in' Button" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log in' Button" sap:VirtualizedContainerService.HintSize="337,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b87e6601-180c-4919-8cac-2d89fb230cba" InformativeScreenshot="e728a1283515f7a128ac8860eacd198b" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Log in' style='*display: block*' tag='A' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -145,14 +145,14 @@
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
           </PickBranch.Trigger>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EnterAccount - Invoke Workflow File (EnterAccount.xaml)" sap:VirtualizedContainerService.HintSize="334,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="EnterAccount.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EnterAccount - Invoke Workflow File (EnterAccount.xaml)" sap:VirtualizedContainerService.HintSize="337,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="EnterAccount.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </PickBranch>
-        <PickBranch sap2010:Annotation.AnnotationText="It checks if an user is already is logged in, if the correct user is logged in it will continue as normal otherwise it will log out and perform the logging sequence" DisplayName="PickBranch a User is Logged in" sap:VirtualizedContainerService.HintSize="642,1109" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+        <PickBranch sap2010:Annotation.AnnotationText="It checks if an user is already is logged in, if the correct user is logged in it will continue as normal otherwise it will log out and perform the logging sequence" DisplayName="PickBranch a User is Logged in" sap:VirtualizedContainerService.HintSize="506,482" sap2010:WorkflowViewState.IdRef="PickBranch_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +161,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <PickBranch.Trigger>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log out' button" sap:VirtualizedContainerService.HintSize="552,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log out' button" sap:VirtualizedContainerService.HintSize="416,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f78d0735-066d-47eb-86b5-7928f50fa52a" InformativeScreenshot="6aa5cb67aacdf7313141a5caeac81a79" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Log out' style='*display: block*' tag='A' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -174,14 +174,15 @@
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
           </PickBranch.Trigger>
-          <Sequence sap2010:Annotation.AnnotationText="Ensures that the corect account is displayed" DisplayName="Enter correct account" sap:VirtualizedContainerService.HintSize="552,757" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap2010:Annotation.AnnotationText="Ensures that the corect account is displayed" DisplayName="Enter correct account" sap:VirtualizedContainerService.HintSize="416,56" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CurrentUser" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get current username" sap:VirtualizedContainerService.HintSize="518,139" sap2010:WorkflowViewState.IdRef="GetValue_2">
@@ -199,7 +200,7 @@
                 <OutArgument x:TypeArguments="x:String">[CurrentUser]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <If Condition="[in_username &lt;&gt; CurrentUser.Substring(8)]" DisplayName="If Current user is not the correct one" sap:VirtualizedContainerService.HintSize="518,527" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[in_username &lt;&gt; CurrentUser.Substring(8)]" DisplayName="If Current user is not the correct one" sap:VirtualizedContainerService.HintSize="518,1039" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,22 +208,22 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,139" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,654" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap2010:Annotation.AnnotationText="signs out current user and logs in the correct user" DisplayName="Relog" sap:VirtualizedContainerService.HintSize="450,79" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence sap2010:Annotation.AnnotationText="signs out current user and logs in the correct user" DisplayName="Relog" sap:VirtualizedContainerService.HintSize="450,594" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Format(&quot;Logging out current user&quot;)]" />
-                    <ui:Click AlterIfDisabled="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Click &quot;Log out&quot; button" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" UnblockInput="{x:Null}">
+                    <ui:LogMessage DisplayName="Log Logging out" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[String.Format(&quot;Logging out current user&quot;)]" />
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click &quot;Log out&quot; button" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -244,7 +245,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EnterAccount - Invoke Workflow File (EnterAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="EnterAccount.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="EnterAccount - Invoke Workflow File (EnterAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="EnterAccount.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_username">[in_username]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_password">[in_password]</InArgument>
@@ -254,22 +255,22 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,226" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[String.Format(&quot;The current user is the corect one&quot;)]" />
+                  <ui:LogMessage DisplayName="Log Correct User Logged In" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[String.Format(&quot;The current user is the corect one&quot;)]" />
                 </Sequence>
               </If.Else>
             </If>
           </Sequence>
         </PickBranch>
-        <PickBranch DisplayName="Timeout" sap:VirtualizedContainerService.HintSize="240,1109" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+        <PickBranch DisplayName="Timeout" sap:VirtualizedContainerService.HintSize="424,482" sap2010:WorkflowViewState.IdRef="PickBranch_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
