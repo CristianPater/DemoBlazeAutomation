@@ -111,7 +111,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1276,4551" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence sap:VirtualizedContainerService.HintSize="1276,4724" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="brand" />
       <Variable x:TypeArguments="x:Int32" Name="minPrice" />
@@ -122,7 +122,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Extracts the products from the table, receives input from user about the parameters and retains the most expesive product" DisplayName="Scrape Products Table" sap:VirtualizedContainerService.HintSize="620,4528" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence sap2010:Annotation.AnnotationText="Extracts the products from the table, receives input from user about the parameters and retains the most expesive product" DisplayName="Scrape Products Table" sap:VirtualizedContainerService.HintSize="620,4701" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_ScrapedProducts" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredProducts" />
@@ -138,13 +138,14 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="586,4403" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3bdfb39938b9d4718f99666e9bd4ea1a" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="586,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Started the scraping and selecting proccess&quot;]" />
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="586,4239" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3bdfb39938b9d4718f99666e9bd4ea1a" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4233" sap2010:WorkflowViewState.IdRef="Sequence_38">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,4060" sap2010:WorkflowViewState.IdRef="Sequence_38">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -347,7 +348,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <Assign DisplayName="Assign mostExpensiveProduct" sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign DisplayName="Assign mostExpensiveProduct" sap:VirtualizedContainerService.HintSize="518,105" sap2010:WorkflowViewState.IdRef="Assign_5">
                 <Assign.To>
                   <OutArgument x:TypeArguments="sd:DataRow">[out_mostExpensiveProduct]</OutArgument>
                 </Assign.To>
@@ -355,11 +356,11 @@
                   <InArgument x:TypeArguments="sd:DataRow">[dt_FilteredProducts.AsEnumerable().OrderByDescending(Function(r) CInt(r("Price").ToString().Replace("$", "").Trim())).First()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Extracted Product" sap:VirtualizedContainerService.HintSize="518,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[String.Join(&quot;, &quot;, out_mostExpensiveProduct.ItemArray)]" />
             </Sequence>
           </ActivityAction>
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
+      <ui:LogMessage DisplayName="Log Extracted Product" sap:VirtualizedContainerService.HintSize="586,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Selected the most expesive product : &quot; + String.Join(&quot;, &quot;, out_mostExpensiveProduct.ItemArray)]" />
     </Sequence>
   </Sequence>
 </Activity>
