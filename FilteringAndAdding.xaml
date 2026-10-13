@@ -151,7 +151,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bc7e42cf-a9aa-40e7-ab5f-0720a31f871c" InformativeScreenshot="560f5f262d2609329b07d9f921231fe3" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Home (current)' tag='A' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bc7e42cf-a9aa-40e7-ab5f-0720a31f871c" InformativeScreenshot="560f5f262d2609329b07d9f921231fe3" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Home*' tag='A' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
