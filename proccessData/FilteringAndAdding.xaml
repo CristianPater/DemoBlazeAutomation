@@ -219,7 +219,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="scrapes the selected table of products and returns the most expensive product of the Brand and within the Price range entered by the user" DisplayName="ScrapeProductsTable - Invoke Workflow File (ScrapeProductsTable.xaml)" sap:VirtualizedContainerService.HintSize="1244,237" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ScrapeProductsTable.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="scrapes the selected table of products and returns the most expensive product of the Brand and within the Price range entered by the user" DisplayName="ScrapeProductsTable - Invoke Workflow File (ScrapeProductsTable.xaml)" sap:VirtualizedContainerService.HintSize="1244,237" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="proccessData\ScrapeProductsTable.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_mostExpensiveProduct">[filteredProduct]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>

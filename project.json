@@ -2,7 +2,7 @@
   "name": "PhoneAuto",
   "projectId": "05d03bc5-251e-4867-b920-386e18dec584",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "main\\Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.24.4]",
     "UiPath.Mail.Activities": "[1.24.16]",
@@ -49,8 +49,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "91688c7d-1e81-4c1b-ac84-fd990744bbcd",
+      "filePath": "main\\Main.xaml",
+      "uniqueId": "1f1af572-54af-45a8-a571-f7fcb9a85784",
       "input": [],
       "output": []
     }
