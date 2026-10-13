@@ -291,9 +291,9 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <PickBranch.Trigger>
-                    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                    <Delay DisplayName="Log in Delay " Duration="00:00:10" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Delay_3" />
                   </PickBranch.Trigger>
-                  <Throw Exception="[New Exception(&quot;Time out error, no branch was selected&quot;)]" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Throw_1">
+                  <Throw DisplayName="Throw Unexpected Login Error" Exception="[New Exception(&quot;Unexpected error during login&quot;)]" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Throw_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
