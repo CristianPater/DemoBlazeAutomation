@@ -100,7 +100,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1346,4856" sap2010:WorkflowViewState.IdRef="Sequence_34">
+  <Sequence sap:VirtualizedContainerService.HintSize="1346,5102" sap2010:WorkflowViewState.IdRef="Sequence_34">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="productName" />
       <Variable x:TypeArguments="sd:DataRow" Name="filteredProduct" />
@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="It selects the most expensive product that is made by a specific brand and within a price range and adds that product to the cart" DisplayName="Selecting and Adding Product to cart" sap:VirtualizedContainerService.HintSize="1346,4833" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence sap2010:Annotation.AnnotationText="It selects the most expensive product that is made by a specific brand and within a price range and adds that product to the cart" DisplayName="Selecting and Adding Product to cart" sap:VirtualizedContainerService.HintSize="1346,5079" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="product" />
         <Variable x:TypeArguments="x:String" Name="selectedProductType" />
@@ -122,19 +122,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1312,175" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Starting the proccess to select the wanted product&quot;]" />
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="1312,4378" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="878a5b39648077ea6e0b2e72baefb70c" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="1312,4624" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="878a5b39648077ea6e0b2e72baefb70c" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1278,4159" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1278,4405" sap2010:WorkflowViewState.IdRef="Sequence_42">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="categoryExists" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" DisplayName="Input Product Type" sap:VirtualizedContainerService.HintSize="1244,329" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Product Type" OptionsString="Phones;Laptops;Monitors" Title="Input Type of Product">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Product Type" sap:VirtualizedContainerService.HintSize="1244,275" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Product Type" Title="Input Type of Product">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[selectedProductType]</OutArgument>
                 </ui:InputDialog.Result>
@@ -161,82 +164,61 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="clicks the coresponding product type based on the user input" DisplayName="Product Type Switch" Expression="[selectedProductType]" sap:VirtualizedContainerService.HintSize="1244,250" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-                <Switch.Default>
-                  <Throw DisplayName="Throw Unrecognised Product Type " Exception="[New Exception(&quot;Unrecognised Product Type&quot; + selectedProductType)]" sap:VirtualizedContainerService.HintSize="459,91" sap2010:WorkflowViewState.IdRef="Throw_3" />
-                </Switch.Default>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Phones" ClickType="CLICK_SINGLE" DisplayName="Click 'Phones' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87533893-3348-49f4-b834-a8664004b6fb" InformativeScreenshot="53330b99116d83e5539f72da46055cb0" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Phones' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Laptops" ClickType="CLICK_SINGLE" DisplayName="Click 'Laptops' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6fa74c1-780b-47b1-ad2a-9e0722066a5c" InformativeScreenshot="258e6e78655d3f32e39fb8763674c809" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Laptops' id='itemc' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Monitors" ClickType="CLICK_SINGLE" DisplayName="Click 'Monitors' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d80849c6-2a2e-40b0-b007-c1d83855791d" InformativeScreenshot="2dad88f08fc6ac3fb6a5e5b5f4ef0e89" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Monitors' id='itemc' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-              </Switch>
+              <ui:UiElementExists DisplayName="Element Exists selectedProductType Category" Exists="[categoryExists]" sap:VirtualizedContainerService.HintSize="1244,139" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9895cb8-9e99-47c3-8197-8a9637236621" InformativeScreenshot="6212d6a05742b4991bdeadb6d08362c5" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='{0}' tag='A' /&gt;&quot;, selectedProductType)]">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+              </ui:UiElementExists>
+              <If Condition="[categoryExists]" DisplayName="If The Catergory Exists" sap:VirtualizedContainerService.HintSize="1244,535" sap2010:WorkflowViewState.IdRef="If_7">
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'selectedProductType' Button" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87533893-3348-49f4-b834-a8664004b6fb" InformativeScreenshot="53330b99116d83e5539f72da46055cb0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='{0}' tag='A' /&gt;&quot;, selectedProductType)]">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,174" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw DisplayName="Throw Unrecognised Product Type " Exception="[New Exception(&quot;Unrecognised Product Type&quot; + selectedProductType)]" sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  </Sequence>
+                </If.Else>
+              </If>
               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="scrapes the selected table of products and returns the most expensive product of the Brand and within the Price range entered by the user" DisplayName="ScrapeProductsTable - Invoke Workflow File (ScrapeProductsTable.xaml)" sap:VirtualizedContainerService.HintSize="1244,237" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ScrapeProductsTable.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_mostExpensiveProduct">[filteredProduct]</OutArgument>
@@ -247,82 +229,28 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="ensures that the process is back in the first page of the table of products after it scraped them" DisplayName="Product Type Switch" Expression="[selectedProductType]" sap:VirtualizedContainerService.HintSize="1244,263" sap2010:WorkflowViewState.IdRef="Switch`1_3">
-                <Switch.Default>
-                  <Throw DisplayName="Throw Unrecognised Product Type " Exception="[New Exception(&quot;Unrecognised Product Type&quot; + selectedProductType)]" sap:VirtualizedContainerService.HintSize="459,91" sap2010:WorkflowViewState.IdRef="Throw_4" />
-                </Switch.Default>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Phones" ClickType="CLICK_SINGLE" DisplayName="Click 'Phones' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87533893-3348-49f4-b834-a8664004b6fb" InformativeScreenshot="53330b99116d83e5539f72da46055cb0" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Phones' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Laptops" ClickType="CLICK_SINGLE" DisplayName="Click 'Laptops' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6fa74c1-780b-47b1-ad2a-9e0722066a5c" InformativeScreenshot="258e6e78655d3f32e39fb8763674c809" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Laptops' id='itemc' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" x:Key="Monitors" ClickType="CLICK_SINGLE" DisplayName="Click 'Monitors' Button" sap:VirtualizedContainerService.HintSize="458,107" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d80849c6-2a2e-40b0-b007-c1d83855791d" InformativeScreenshot="2dad88f08fc6ac3fb6a5e5b5f4ef0e89" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Monitors' id='itemc' tag='A' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
-              </Switch>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'selectedProductType' Button" sap:VirtualizedContainerService.HintSize="1244,139" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87533893-3348-49f4-b834-a8664004b6fb" InformativeScreenshot="53330b99116d83e5539f72da46055cb0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='{0}' tag='A' /&gt;&quot;, selectedProductType)]">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
               <Assign DisplayName="Assign most Expensive filtered product name" sap:VirtualizedContainerService.HintSize="1244,115" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[productName]</OutArgument>
