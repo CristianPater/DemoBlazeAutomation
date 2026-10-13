@@ -111,7 +111,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1276,3872" sap2010:WorkflowViewState.IdRef="Sequence_29">
+  <Sequence sap:VirtualizedContainerService.HintSize="1276,4321" sap2010:WorkflowViewState.IdRef="Sequence_29">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="brand" />
       <Variable x:TypeArguments="x:Int32" Name="minPrice" />
@@ -122,7 +122,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Extracts the products from the table, receives input from user about the parameters and retains the most expesive product" DisplayName="Scrape Products Table" sap:VirtualizedContainerService.HintSize="552,3849" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence sap2010:Annotation.AnnotationText="Extracts the products from the table, receives input from user about the parameters and retains the most expesive product" DisplayName="Scrape Products Table" sap:VirtualizedContainerService.HintSize="552,4298" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_ScrapedProducts" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredProducts" />
@@ -177,15 +177,15 @@
           <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="the maximum amount of products per a page are 9 products, if we extract a lower amount we know that we reached the end of the pages" Condition="[dt_ScrapedProducts.Rows.Count = 9]" CurrentIndex="{x:Null}" DisplayName="Do Extract Products While There are Pages" sap:VirtualizedContainerService.HintSize="518,543" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1" MaxIterations="{x:Null}">
+      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="the maximum amount of products per a page are 9 products, if we extract a lower amount we know that we reached the end of the pages" Condition="[dt_ScrapedProducts.Rows.Count = 9]" DisplayName="Do Extract Products While There are Pages" sap:VirtualizedContainerService.HintSize="518,992" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,355" sap2010:WorkflowViewState.IdRef="Sequence_30">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,804" sap2010:WorkflowViewState.IdRef="Sequence_30">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExtractData ContinueOnError="{x:Null}" DataTable="[dt_ScrapedProducts]" DelayBetweenPagesMS="{x:Null}" DisplayName="Extract Products Page" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h4' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Description' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="382,139" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" NextLinkSelector="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}">
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dt_ScrapedProducts]" DisplayName="Extract Products Page" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Name' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h4' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Description' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
               <ui:ExtractData.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c72bc81d-6018-42be-9d06-7024b4cac191" InformativeScreenshot="6144b08da4ebc7ee144cf9828ba8f4c8" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl id='tbodyid' tag='DIV' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -197,7 +197,49 @@
                 </ui:Target>
               </ui:ExtractData.Target>
             </ui:ExtractData>
-            <ui:MergeDataTable Destination="[dt_Products]" DisplayName="Merge Products Data Table" sap:VirtualizedContainerService.HintSize="382,156" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_ScrapedProducts]" />
+            <ui:MergeDataTable Destination="[dt_Products]" DisplayName="Merge Products Data Table" sap:VirtualizedContainerService.HintSize="450,165" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dt_ScrapedProducts]" />
+            <If Condition="[dt_ScrapedProducts.Rows.Count = 9]" DisplayName="If There Are More Pages" sap:VirtualizedContainerService.HintSize="450,440" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Next' button" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3555c730-84e9-40ed-b9be-416ccfdfedb7" InformativeScreenshot="9129b251183ff095f2de87e8f503edaa" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Next' tag='BUTTON' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
           </Sequence>
         </ui:InterruptibleDoWhile.Body>
         <sap:WorkflowViewStateService.ViewState>
@@ -207,7 +249,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InterruptibleDoWhile>
       <ui:OutputDataTable DataTable="[dt_Products]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="518,112" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dtAsString]" />
-      <WriteLine DisplayName="Write extracted dt" sap:VirtualizedContainerService.HintSize="518,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[dtAsString]" TextWriter="{x:Null}" />
+      <WriteLine DisplayName="Write extracted dt" sap:VirtualizedContainerService.HintSize="518,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[dtAsString]" />
       <ui:FilterDataTable DataTable="[dt_Products]" DisplayName="Filter by Brand and Price Range" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="518,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[dt_BrandFiltered]" SelectColumnsMode="Remove">
         <ui:FilterDataTable.Filters>
           <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
@@ -235,7 +277,7 @@
           <InArgument x:TypeArguments="sd:DataTable">[dt_BrandFiltered.Clone()]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BrandFiltered]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,775" sap2010:WorkflowViewState.IdRef="ForEachRow_1" MaxIterations="{x:Null}" Values="{x:Null}">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_BrandFiltered]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,775" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
@@ -255,7 +297,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:AddDataRow ArrayRow="[row.ItemArray]" DataRow="{x:Null}" DataTable="[dt_FilteredProducts]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[row.ItemArray]" DataTable="[dt_FilteredProducts]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
