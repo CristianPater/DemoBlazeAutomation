@@ -138,7 +138,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="586,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Started the scraping and selecting proccess&quot;]" />
+      <ui:LogMessage DisplayName="Log Start Scraping and Selecting" sap:VirtualizedContainerService.HintSize="586,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Started the scraping and selecting proccess&quot;]" />
       <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="586,4239" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3bdfb39938b9d4718f99666e9bd4ea1a" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
@@ -335,7 +335,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Throw Exception="[new Exception(&quot;There is no Product that matches these conditions&quot;)]" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                    <Throw DisplayName="Throw No Match Exception" Exception="[new Exception(&quot;There is no Product that matches these conditions&quot;)]" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
                   </Sequence>
                 </If.Then>
                 <If.Else>

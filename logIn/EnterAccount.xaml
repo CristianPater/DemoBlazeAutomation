@@ -250,7 +250,7 @@
                   <ui:LogMessage DisplayName="Log Valid Credentials" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[String.Format(&quot;Unexpected error happened after login sequence&quot;)]" />
                 </PickBranch>
               </Pick>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1366,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The login procedure happened without errors&quot;]" />
+              <ui:LogMessage DisplayName="Log Succsesfull Log In" sap:VirtualizedContainerService.HintSize="1366,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;The login procedure happened without errors&quot;]" />
             </Sequence>
           </ActivityAction>
         </ui:BrowserScope.Body>

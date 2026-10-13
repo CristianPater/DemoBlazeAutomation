@@ -283,7 +283,7 @@
                     </If>
                   </Sequence>
                 </PickBranch>
-                <PickBranch DisplayName="Timeout" sap:VirtualizedContainerService.HintSize="424,1626" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                <PickBranch DisplayName="PickBranch Logging in Timeout" sap:VirtualizedContainerService.HintSize="424,1626" sap2010:WorkflowViewState.IdRef="PickBranch_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

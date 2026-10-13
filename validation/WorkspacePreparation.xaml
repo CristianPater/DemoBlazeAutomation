@@ -163,7 +163,7 @@
           </If.Else>
         </If>
       </Sequence>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Finished clean-up&quot;]" />
+      <ui:LogMessage DisplayName="Log Clean-up End" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Finished clean-up&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>

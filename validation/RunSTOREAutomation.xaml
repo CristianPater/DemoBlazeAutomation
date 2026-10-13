@@ -114,7 +114,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="467,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Opening browser and running the automation&quot;]" />
+      <ui:LogMessage DisplayName="Log Start Product Selecting and Adding" sap:VirtualizedContainerService.HintSize="467,173" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Opening browser and running the automation&quot;]" />
       <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Chrome Browser On Page STORE" sap:VirtualizedContainerService.HintSize="467,796" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Private="True" Url="https://www.demoblaze.com/index.html">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
@@ -149,7 +149,7 @@
           </ActivityAction>
         </ui:OpenBrowser.Body>
       </ui:OpenBrowser>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="467,164" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Finished running the automation for the STORE page&quot;]" />
+      <ui:LogMessage DisplayName="Log End Product Selecting and Adding" sap:VirtualizedContainerService.HintSize="467,164" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Finished running the automation for the STORE page&quot;]" />
     </Sequence>
   </Sequence>
 </Activity>
