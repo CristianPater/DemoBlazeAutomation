@@ -367,7 +367,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:UiElementExists DisplayName="Element Exists Most Expesive Selected Product" Exists="[productExists]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                             <ui:UiElementExists.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21151823-2ca8-42e9-b2b7-b87586239200" InformativeScreenshot="612470f8a90fdeec8dd990a6a7caa250" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl class='hrefch' innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21151823-2ca8-42e9-b2b7-b87586239200" InformativeScreenshot="612470f8a90fdeec8dd990a6a7caa250" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
                           <If Condition="[not(productExists)]" DisplayName="If Product is not on this Page" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="If_5">
@@ -472,7 +472,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50b5d084-0650-4b8c-bf42-49052649845e" InformativeScreenshot="5f6c466f1dd785e9695d7cef3f42ebc0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl class='hrefch' innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50b5d084-0650-4b8c-bf42-49052649845e" InformativeScreenshot="5f6c466f1dd785e9695d7cef3f42ebc0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
