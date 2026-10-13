@@ -144,7 +144,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66240f6e-9e03-4ce3-88fd-7590057b17b2" InformativeScreenshot="37b4df527fabf6ab65e240ef77652aed" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Cart' tag='A' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="66240f6e-9e03-4ce3-88fd-7590057b17b2" InformativeScreenshot="37b4df527fabf6ab65e240ef77652aed" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Cart' tag='A' /&gt;" WaitForReady="COMPLETE">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -153,7 +153,7 @@
               </ui:Click>
               <ui:UiElementExists DisplayName="Element Exists 'Delete' Button" Exists="[cartProductsExists]" sap:VirtualizedContainerService.HintSize="518,139" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a694bc1-34a0-49a9-95c0-be90ef5d1b16" InformativeScreenshot="cb7490d2208dabc5633cdc4c3253c940" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a694bc1-34a0-49a9-95c0-be90ef5d1b16" InformativeScreenshot="cb7490d2208dabc5633cdc4c3253c940" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
               <If Condition="[cartProductsExists]" DisplayName="If There Are Items In The Cart" sap:VirtualizedContainerService.HintSize="518,979" sap2010:WorkflowViewState.IdRef="If_1">
@@ -166,7 +166,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[dtCart]" DisplayName="Extract Structured Data from Cart" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Pic' attr='fulltext' name2='Pic Src' attr2='src' /&gt;&lt;column name='Title' attr='fulltext' /&gt;&lt;column name='Price' attr='fulltext' /&gt;&lt;column name='x' attr='fulltext' name2='x Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
                       <ui:ExtractData.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="103ddd5c-5150-429b-8573-3dcd9a687ebc" InformativeScreenshot="8dbbf273fa8644abe3f52326a7c3ac7b" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="103ddd5c-5150-429b-8573-3dcd9a687ebc" InformativeScreenshot="8dbbf273fa8644abe3f52326a7c3ac7b" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>

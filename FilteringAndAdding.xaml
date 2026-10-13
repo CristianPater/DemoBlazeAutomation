@@ -151,7 +151,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bc7e42cf-a9aa-40e7-ab5f-0720a31f871c" InformativeScreenshot="560f5f262d2609329b07d9f921231fe3" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Home (current)' tag='A' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bc7e42cf-a9aa-40e7-ab5f-0720a31f871c" InformativeScreenshot="560f5f262d2609329b07d9f921231fe3" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Home (current)' tag='A' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -368,7 +368,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:UiElementExists DisplayName="Element Exists Most Expesive Selected Product" Exists="[productExists]" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                             <ui:UiElementExists.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21151823-2ca8-42e9-b2b7-b87586239200" InformativeScreenshot="612470f8a90fdeec8dd990a6a7caa250" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21151823-2ca8-42e9-b2b7-b87586239200" InformativeScreenshot="612470f8a90fdeec8dd990a6a7caa250" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" TimeoutMS="5000" WaitForReady="COMPLETE" />
                             </ui:UiElementExists.Target>
                           </ui:UiElementExists>
                           <If Condition="[not(productExists)]" DisplayName="If Product is not on this Page" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="If_5">
@@ -391,7 +391,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88e9df92-80ff-494f-9420-c92118759f75" InformativeScreenshot="9129b251183ff095f2de87e8f503edaa" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Next' tag='BUTTON' /&gt;">
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88e9df92-80ff-494f-9420-c92118759f75" InformativeScreenshot="9129b251183ff095f2de87e8f503edaa" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Next' tag='BUTTON' /&gt;">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
@@ -473,7 +473,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50b5d084-0650-4b8c-bf42-49052649845e" InformativeScreenshot="5f6c466f1dd785e9695d7cef3f42ebc0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50b5d084-0650-4b8c-bf42-49052649845e" InformativeScreenshot="5f6c466f1dd785e9695d7cef3f42ebc0" Selector="[string.Format(&quot;&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl innertext='*{0}*' tag='A' /&gt;&quot;, ProductName)]" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -492,7 +492,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5394226a-fecd-403a-9494-6d34d77b4680" InformativeScreenshot="0fa2672fa696bff0ecbbd9f2545071b9" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Add to cart' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5394226a-fecd-403a-9494-6d34d77b4680" InformativeScreenshot="0fa2672fa696bff0ecbbd9f2545071b9" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Add to cart' tag='A' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -526,7 +526,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c8fd3590-ed62-4247-aca2-b98c2f8844c0" InformativeScreenshot="32b3edcb543bbbbb83ebe1bed46c78cc" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Cart' tag='A' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c8fd3590-ed62-4247-aca2-b98c2f8844c0" InformativeScreenshot="32b3edcb543bbbbb83ebe1bed46c78cc" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Cart' tag='A' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -535,12 +535,12 @@
                 </ui:Click>
                 <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'Product Name'" sap:VirtualizedContainerService.HintSize="1210,139" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ff97d71-b88e-435c-a075-9d001c223a85" InformativeScreenshot="1e66638d108e838c26f2c8e2eef68f92" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3ff97d71-b88e-435c-a075-9d001c223a85" InformativeScreenshot="1e66638d108e838c26f2c8e2eef68f92" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
                 <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" SimulateClick="{x:Null}" DataTable="[cartProduct]" DisplayName="Extract Structured Data from Cart" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&#xA;&#x9;&lt;column name='Pic' attr='fulltext' name2='Pic Src' attr2='src' /&gt;&#xA;&#x9;&lt;column name='Title' attr='fulltext' /&gt;&#xA;&#x9;&lt;column name='Price' attr='fulltext' /&gt;&#xA;&#x9;&lt;column name='x' attr='fulltext' name2='x Url' attr2='href' /&gt;&#xA;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="1210,139" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100">
                   <ui:ExtractData.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="103ddd5c-5150-429b-8573-3dcd9a687ebc" InformativeScreenshot="8dbbf273fa8644abe3f52326a7c3ac7b" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="103ddd5c-5150-429b-8573-3dcd9a687ebc" InformativeScreenshot="8dbbf273fa8644abe3f52326a7c3ac7b" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl tag='TABLE' /&gt;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>

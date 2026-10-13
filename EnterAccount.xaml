@@ -97,13 +97,13 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1468,1882.9999999999998" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="1468,1843" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="it enters the values into the coresponding fields, throws an error if the credentials are invalid" DisplayName="Enter account" sap:VirtualizedContainerService.HintSize="1468,1860" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence sap2010:Annotation.AnnotationText="it enters the values into the coresponding fields, throws an error if the credentials are invalid" DisplayName="Enter account" sap:VirtualizedContainerService.HintSize="1468,1820" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -112,7 +112,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:LogMessage DisplayName="Log Username" sap:VirtualizedContainerService.HintSize="1434,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[String.Format(&quot;Logging in user:{0}&quot;,in_username)]" />
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="1434,1571" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="d9052e7ebeeaf4faf38eaadbe1f823a9" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe  STORE'" sap:VirtualizedContainerService.HintSize="1434,1531" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="d9052e7ebeeaf4faf38eaadbe1f823a9" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -136,7 +136,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57366e2c-c490-4050-bb26-7d53b0ea1f27" InformativeScreenshot="ac6f2fd0388aafd34d45188e234135dd" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Log in' tag='A' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57366e2c-c490-4050-bb26-7d53b0ea1f27" InformativeScreenshot="ac6f2fd0388aafd34d45188e234135dd" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Log in' tag='A' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -154,7 +154,7 @@
               </ui:Click>
               <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into username field" sap:VirtualizedContainerService.HintSize="1366,188" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_username]">
                 <ui:TypeInto.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7fab77ae-2e4e-4313-92d0-4c8957ef9dde" InformativeScreenshot="99dd7ca6b53623785d605ea52ba620d0" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl id='loginusername' tag='INPUT' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7fab77ae-2e4e-4313-92d0-4c8957ef9dde" InformativeScreenshot="99dd7ca6b53623785d605ea52ba620d0" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl id='loginusername' tag='INPUT' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -166,7 +166,7 @@
               </ui:TypeInto>
               <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text into password field" sap:VirtualizedContainerService.HintSize="1366,139" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[in_password]">
                 <ui:TypeSecureText.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9151ea8-31e5-47e8-bf13-ed06c90ae089" InformativeScreenshot="f68baf1621b947ab00cc51fd4a87a840" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl id='loginpassword' tag='INPUT' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9151ea8-31e5-47e8-bf13-ed06c90ae089" InformativeScreenshot="f68baf1621b947ab00cc51fd4a87a840" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl id='loginpassword' tag='INPUT' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -188,7 +188,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8654b00-449c-4e3c-a5ac-51d7df3de846" InformativeScreenshot="e94ac1bca7e70d68a06033da0ded41f1" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Log in' parentid='logInModal' tag='BUTTON' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8654b00-449c-4e3c-a5ac-51d7df3de846" InformativeScreenshot="e94ac1bca7e70d68a06033da0ded41f1" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Log in' parentid='logInModal' tag='BUTTON' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -233,7 +233,7 @@
                   <PickBranch.Trigger>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log out' button" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                       <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f78d0735-066d-47eb-86b5-7928f50fa52a" InformativeScreenshot="6aa5cb67aacdf7313141a5caeac81a79" Selector="&lt;html app='chrome.exe' title='STORE' /&gt;&lt;webctrl aaname='Log out' style='*display: block*' tag='A' /&gt;" TimeoutMS="5">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f78d0735-066d-47eb-86b5-7928f50fa52a" InformativeScreenshot="6aa5cb67aacdf7313141a5caeac81a79" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Log out' style='*display: block*' tag='A' /&gt;" TimeoutMS="5">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
