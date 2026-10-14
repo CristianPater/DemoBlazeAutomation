@@ -233,7 +233,7 @@
                   <PickBranch.Trigger>
                     <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Log out' button" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                       <ui:WaitUiElementAppear.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f78d0735-066d-47eb-86b5-7928f50fa52a" InformativeScreenshot="6aa5cb67aacdf7313141a5caeac81a79" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Log out' style='*display: block*' tag='A' /&gt;" TimeoutMS="5">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f78d0735-066d-47eb-86b5-7928f50fa52a" InformativeScreenshot="6aa5cb67aacdf7313141a5caeac81a79" Selector="&lt;html app='chrome.exe' url='https://www.demoblaze.com/index.html' /&gt;&lt;webctrl aaname='Log out' style='*display: block*' tag='A' /&gt;" TimeoutMS="5000">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
